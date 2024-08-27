@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 const TitlePage = () => {
   const movieDetails = useSelector((store) => store.details.movieD);
   if (!movieDetails) return null;
-  console.log(movieDetails);
+  // console.log(movieDetails);
   const {
     original_title,
     overview,

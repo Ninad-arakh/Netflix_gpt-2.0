@@ -1,5 +1,5 @@
 import { signOut } from "firebase/auth";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { auth } from "../Utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,13 +8,13 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../Utils/AppSlice";
 import { Netflix_logo } from "../Utils/Constants";
 import { IoMdSearch } from "react-icons/io";
+import Search from "./Search/Search";
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
-  const query = useRef();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -50,27 +50,12 @@ const Header = () => {
     setToggle(!toggle);
   };
 
-  const SearchTheQuery = ()=> {
-    const searchQuery = query.current.value;
-  }
-
   return (
     <div className="absolute px-8 mt-0 pt-0 py-1 bg-gradient-to-b  w-[100%]  from-black z-10 xs:pl-4 flex justify-between ">
       <img className="w-32 xs:w-24" src={Netflix_logo} alt="logo" />
       {user && (
         <div className="text-white p-4 flex">
-          {toggle && (
-            <div className="flex">
-              <input
-                ref={query}
-                type="text"
-                placeholder="search here"
-                className="px-2 py-1 bg-gray-600 text-white rounded-l-lg h-8 mt-1"
-                onSubmit={(e) => e.preventDefault()}
-              />
-              <button className="bg-gray-800 px-2 m h-8 mt-1 rounded-r-lg" onClick={SearchTheQuery}><IoMdSearch /></button>
-            </div>
-          )}
+          {toggle && <Search />}
           {
             <button className=" mx-4 text-2xl -mt-3" onClick={handleSearch}>
               <IoMdSearch />
