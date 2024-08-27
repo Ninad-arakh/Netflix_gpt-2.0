@@ -15,7 +15,7 @@ const Watch = () => {
   if (!key) return null;
   //   console.log(key);
   return (
-    <div className=" bg-neutral-900 m-0 p-0  w-screen xs:w-screen">
+    <div className=" bg-neutral-900 m-0 p-0  w-[100%] xs:w-[100%]">
       <div className="flex justify-around w-screen">
         <iframe
             className="w-[70%]  xs:w-screen "

@@ -3,7 +3,7 @@ import { CDN_URL } from "../../Utils/Constants";
 import { useNavigate } from "react-router-dom";
 
 const SearchMovieCard = (props) => {
-  console.log("props ", props);
+  // console.log("props ", props);
   const navigate = useNavigate();
   const { original_title, id, poster_path, vote_average, overview } =
     props.movies;

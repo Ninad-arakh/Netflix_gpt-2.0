@@ -12,7 +12,7 @@ const Search = () => {
   const navigate = useNavigate();
 
   const getSearchMoies = () => {
-    console.log("searchResults", searchResults);
+    // console.log("searchResults", searchResults);
     fetch(
       "https://api.themoviedb.org/3/search/movie?query=" +
         searchResults +
