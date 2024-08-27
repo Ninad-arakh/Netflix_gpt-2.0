@@ -36,13 +36,13 @@ const Search = () => {
   };
   return (
     <div>
-      <form className="flex" onSubmit={(e) => e.preventDefault()}>
+      <form className="flex " onSubmit={(e) => e.preventDefault()}>
         <input
           ref={query}
           type="text"
           placeholder="search here"
           required
-          className="px-2 py-1 bg-gray-600 text-white rounded-l-lg h-8 mt-1"
+          className="px-2 py-1 bg-gray-600 text-white rounded-l-lg h-8 mt-1 xs:w-[100%]"
         />
         <button
           className="bg-gray-800 px-2 m h-8 mt-1 rounded-r-lg"

@@ -6,7 +6,7 @@ const MovieList = (props) => {
   const { movieList, title } = props;
 
   return (
-    <div className="md:px-2 sm:px-2 xs:px-2">
+    <div className="md:px-2 sm:px-2 xs:px-2 xs:py-[9%]">
       <h1 className="md:text-2xl font-medium md:py-5 text-white relative sm:text-lg ">
         {title}
       </h1>

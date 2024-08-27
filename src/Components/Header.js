@@ -57,7 +57,7 @@ const Header = () => {
         <div className="text-white p-4 flex">
           {toggle && <Search />}
           {
-            <button className=" mx-4 text-2xl -mt-3" onClick={handleSearch}>
+            <button className=" mx-4 text-2xl -mt-3 xs:text-xl xs:mt-0" onClick={handleSearch}>
               <IoMdSearch />
             </button>
           }
@@ -68,7 +68,7 @@ const Header = () => {
           />
           <button
             onClick={handleSignOut}
-            className="bg-red-600 xs:w-13 xs:h-8 w-15 h-9 ml-1 py-1 px-2 rounded-lg hover:bg-red-800 hover:font-medium duration-150"
+            className="bg-red-600 xs:w-14 xs:overflow-hidden xs:h-8 w-15 h-9 ml-1 py-1 px-2 rounded-lg hover:bg-red-800 hover:font-medium duration-150"
           >
             Sign Out
           </button>

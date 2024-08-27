@@ -86,7 +86,7 @@ const Login = () => {
       <div className="absolute m-0">
         <img
           src="https://gtwallpaper.org/sites/default/files/wallpaper/246844/netflix-background-246844-2224740-3441109.png"
-          className=""
+          className="w-screen h-screen object-cover"
         />
       </div>
 
