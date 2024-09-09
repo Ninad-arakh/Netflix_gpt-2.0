@@ -15,10 +15,10 @@ const Watch = () => {
   if (!key) return null;
   //   console.log(key);
   return (
-    <div className=" bg-neutral-900 m-0 p-0  w-[100%] xs:w-[100%]">
-      <div className="flex justify-around w-screen">
+    <div className=" bg-neutral-900 m-0 p-0  w-[100%] xs:w-[100%] ">
+      <div className="flex justify-around w-[100%]">
         <iframe
-            className="w-[70%]  xs:w-screen "
+          className="w-[70%]  xs:w-[100%] "
           height={520}
           width={980}
           src={
@@ -31,7 +31,7 @@ const Watch = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <TitlePage />
       </div>
     </div>

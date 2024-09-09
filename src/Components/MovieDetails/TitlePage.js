@@ -26,20 +26,20 @@ const TitlePage = () => {
   });
 
   return (
-    <div className="text-white w-[70%] mt-[3%] bg-neutral-900 h-screen flex xs:w-screen xs:px-3 xs:flex-col">
-      <div className="w-[70%] my-2 xs:w-screen xs:px-2">
+    <div className="text-white w-[70%] mt-[3%] bg-neutral-900 h-screen flex xs:w-[100%] xs:px-3 xs:flex-col ">
+      <div className="w-[70%] my-2 xs:w-[100%] xs:px-2 ">
         <div>
-          <button className="flex text-black bg-white rounded-md py-2 px-2 ">
+          <button className="flex text-black bg-white rounded-md py-2 px-2  ">
             <FaPlay /> <span className="ml-2 -mt-[0.20rem]"> Play</span>
           </button>
         </div>
-        <h1 className="text-3xl font-bold my-2">{original_title}</h1>
+        <h1 className="text-3xl font-bold my-2 ">{original_title}</h1>
         <p className=" my-2">{release_date}</p>
         <p className=" my-2">{runtime} Min</p>
         {/* <p className=" my-2">{adult ? " 18+" : "U/A 13+"}</p> */}
         <p>{overview}</p>
       </div>
-      <div className="w-[30%] mt-12 ml-5 xs:w-screen xs:px-2">
+      <div className="sm:w-[30%] w-[20%]  xs:mr-[3%] mt-12 sm:ml-5 xs:w-[44vh] xs:pl-2 ">
         Genres : {genres[0]?.name}, {genres[1]?.name}, {genres[2]?.name},{" "}
         <h2>Tagline : {tagline}</h2>
         <p>{cost ? "Budget : " + cost : ""}</p>
